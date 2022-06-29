@@ -1,0 +1,72 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="46">
+            <item index="0" class="java.lang.String" itemvalue="mysqlclient" />
+            <item index="1" class="java.lang.String" itemvalue="django-bulk-update" />
+            <item index="2" class="java.lang.String" itemvalue="arrow" />
+            <item index="3" class="java.lang.String" itemvalue="python-dateutil" />
+            <item index="4" class="java.lang.String" itemvalue="requests" />
+            <item index="5" class="java.lang.String" itemvalue="numpy" />
+            <item index="6" class="java.lang.String" itemvalue="django_extensions" />
+            <item index="7" class="java.lang.String" itemvalue="kombu" />
+            <item index="8" class="java.lang.String" itemvalue="flake8" />
+            <item index="9" class="java.lang.String" itemvalue="redis" />
+            <item index="10" class="java.lang.String" itemvalue="mongoengine" />
+            <item index="11" class="java.lang.String" itemvalue="celery" />
+            <item index="12" class="java.lang.String" itemvalue="hutils" />
+            <item index="13" class="java.lang.String" itemvalue="shortuuid" />
+            <item index="14" class="java.lang.String" itemvalue="gevent" />
+            <item index="15" class="java.lang.String" itemvalue="peewee" />
+            <item index="16" class="java.lang.String" itemvalue="django-rest-framework-mongoengine" />
+            <item index="17" class="java.lang.String" itemvalue="djangorestframework" />
+            <item index="18" class="java.lang.String" itemvalue="django-cors-headers" />
+            <item index="19" class="java.lang.String" itemvalue="retry" />
+            <item index="20" class="java.lang.String" itemvalue="jira" />
+            <item index="21" class="java.lang.String" itemvalue="meican" />
+            <item index="22" class="java.lang.String" itemvalue="django-celery-beat" />
+            <item index="23" class="java.lang.String" itemvalue="funcy" />
+            <item index="24" class="java.lang.String" itemvalue="django-mysql-geventpool" />
+            <item index="25" class="java.lang.String" itemvalue="tornado" />
+            <item index="26" class="java.lang.String" itemvalue="pymongo" />
+            <item index="27" class="java.lang.String" itemvalue="django-celery-results" />
+            <item index="28" class="java.lang.String" itemvalue="djangorestframework-jwt" />
+            <item index="29" class="java.lang.String" itemvalue="backoff" />
+            <item index="30" class="java.lang.String" itemvalue="clickhouse_driver" />
+            <item index="31" class="java.lang.String" itemvalue="python-gitlab" />
+            <item index="32" class="java.lang.String" itemvalue="gunicorn" />
+            <item index="33" class="java.lang.String" itemvalue="flower" />
+            <item index="34" class="java.lang.String" itemvalue="pandas" />
+            <item index="35" class="java.lang.String" itemvalue="jenkinsapi" />
+            <item index="36" class="java.lang.String" itemvalue="xmind2testcase" />
+            <item index="37" class="java.lang.String" itemvalue="fabric3" />
+            <item index="38" class="java.lang.String" itemvalue="Django" />
+            <item index="39" class="java.lang.String" itemvalue="chinesecalendar" />
+            <item index="40" class="java.lang.String" itemvalue="XMind" />
+            <item index="41" class="java.lang.String" itemvalue="nacos-sdk-python" />
+            <item index="42" class="java.lang.String" itemvalue="pytz" />
+            <item index="43" class="java.lang.String" itemvalue="PyMySQL" />
+            <item index="44" class="java.lang.String" itemvalue="pyjwt" />
+            <item index="45" class="java.lang.String" itemvalue="openpyxl" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N803" />
+          <option value="N806" />
+          <option value="N801" />
+          <option value="N814" />
+          <option value="N802" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="Stylelint" enabled="true" level="ERROR" enabled_by_default="true" />
+  </profile>
+</component>
