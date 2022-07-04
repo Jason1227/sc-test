@@ -16,7 +16,7 @@ ST.url = 'https://sc.jiliguala.com/sa?project=default'
 
 #  从excel表格中读取埋点事件名
 def excel_one_line_to_list():
-    df = pd.read_excel('/Users/jlglqa/Downloads/叽里呱啦核心埋点.xlsx', sheet_name='Sheet1', header=1, usecols='B',
+    df = pd.read_excel('/Users/jlglqa/Downloads/叽里呱啦核心埋点.xlsx', sheet_name='埋点汇总', header=1, usecols='B, F',
                        keep_default_na=False)
 
     df_li = df.values.tolist()

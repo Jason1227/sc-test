@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 from garbevents.custom_sensors_events import GetData
 
 from garbevents.settings import Settings as ST
@@ -8,52 +7,50 @@ import pandas as pd
 
 'mitmdump -p 8889 -s test_custom_sensors_events.py'
 
-ST.report_path = 'report'
-
 #  国内版本
-ST.url = 'https://sc.jiliguala.com/sa?project=default'
+#  ST.url = 'https://sc.jiliguala.com/sa?project=default'
 #  ST.url = 'https://sc.jiliguala.com/sa?project=production'
 
-ST.report_path = 'report'
-
-
-#  从excel表格中读取埋点事件名
-# def excel_one_line_to_list():
-#     df = pd.read_excel('/Users/jlglqa/Downloads/叽里呱啦核心埋点.xlsx', sheet_name='Sheet1', header=1, usecols='B',
-#                        keep_default_na=False)
-#
-#     df_li = df.values.tolist()
-#     ST.all_events = []
-#     for s_li in df_li:
-#         ST.all_events.append(s_li[0])
-#
-#     print(ST.all_events)
-
-
 #  海外版本
-#  ST.url = 'https://sc.jiligaga.com/sa?project=default'
+ST.url = 'https://sc.jiligaga.com/sa?project=default'
 #  ST.url = 'https://sc.jiligaga.com/sa?project=production'
 
 
-# def excel_one_line_to_list_intl():
-#     df = pd.read_excel('/Users/jlglqa/Downloads/cocos埋点大全.xlsx', sheet_name='埋点汇总', header=0, usecols='A',
-#                        keep_default_na=False)
-#
-#     df_li = df.values.tolist()
-#     ST.all_events = []
-#     for s_li in df_li:
-#         ST.all_events.append(s_li[0])
-#
-#     print(ST.all_events)
+ST.report_path = 'report'
 
-ST.all_events = ['home_view']
 
-ST.events_properties = {
-    'home_view': ['vesion'],
-}
+# ST.all_events = ['sublesson_exit_true_click']
+# ST.events_properties = {
+#     'sublesson_exit_true_click': ['sublesson_id', 'version', 'game_id', 'section_id', 'section_type', 'sublesson_type',
+#                                   'section_name', 'interact_state',
+#                                   'exit_video1_path', 'exit_video1_time', 'exit_video1_id', 'exit_video1_conditions',
+#                                   'exit_video2_path', 'exit_video2_time',
+#                                   'exit_video2_id', 'exit_video2_conditions',
+#                                   ]}
+
+# 提取excel中的数据,并转换成 '':[]的格式
+def excel_to_dict():
+    df = pd.read_excel('/Users/jlglqa/Downloads/叽里呱啦核心埋点.xlsx', sheet_name=1, header=1, usecols='A, B',
+                       keep_default_na=False, dtype=str, skiprows='\t')
+
+    df_li = df.values.tolist()
+
+    ST.all_events = []
+    for s_li in df_li:
+        ST.all_events.append(s_li[0])
+    #  print(ST.events_properties)
+
+    ST.events_properties = {}
+    for s in ST.all_events:
+        ST.events_properties[s] = []
+
+    for s_li in df_li:
+        ST.events_properties[s_li[0]].append(s_li[1])
+
+    print(ST.events_properties)
+
 
 addons = [
     GetData(),
-    #  excel_one_line_to_list(),
-    #  excel_one_line_to_list_intl(),
+    excel_to_dict()
 ]
